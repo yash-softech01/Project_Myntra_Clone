@@ -13,6 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #b6b1b1;
+    padding: 0 10px;
 }
 
 .myntra_home {
@@ -23,14 +24,15 @@ header {
     margin-left: 4%;
 }
 
-.action_bar {
+/* .action_bar {
     margin-right: 4%;
-}
+} */
 
 .nav_bar {
     display: flex;
-    min-width: 500px;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .nav_bar a {
@@ -84,8 +86,9 @@ header {
 
 .action_bar {
     display: flex;
-    min-width: 200px;
     justify-content: space-evenly;
+    min-width: 200px;
+    gap: 15px;
 }
 
 .action_container {
@@ -120,7 +123,8 @@ header {
 }
 
 .sale_items {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
 }
 
 .footer_container {
@@ -128,6 +132,7 @@ header {
     background-color: #fafbfc;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .footer_column h3 {
@@ -152,4 +157,29 @@ header {
     color: #94969f;
     text-align: end;
     padding: 15px;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items on small screens */
+        height: auto;
+        padding: 10px; /* Add padding for small screens */
+    }
+
+    .nav_bar {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .search_bar {
+        width: 100%;
+        margin-top: 10px; /* Adjust spacing */
+    }
+
+    .action_bar {
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
